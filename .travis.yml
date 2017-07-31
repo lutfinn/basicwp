@@ -1,0 +1,13 @@
+language: php
+php:
+	- '5.4'
+	- '5.5'
+	- '5.6'
+	- '7.0'
+	- '7.1'
+services:
+	- mysql
+mysql:
+	- mysql -uroot -e "grant all on belajar.* to belajar@localhost identified by 'java'"
+	- mysql -uroot -e "drop database if exists belajar"
+	- mysql -uroot -e "create database belajar"
